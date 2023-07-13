@@ -1,0 +1,123 @@
+.rows{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.squares{
+  font-family:monospace;
+  font-size: 70px;
+  font-weight: bolder;
+  text-align: center;
+  border:solid rgba(2, 1, 2, 0.975) 2px;
+  border-radius: 15px;
+  height:100px;
+  width:100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+  animation: ease-in infinite ;
+  color: black;
+  background-color: rgba(141, 145, 32, 0.543);
+}
+.squares:hover{
+   background-color: transparent;
+   box-shadow: 0px 0px 3px  grey;
+   cursor:pointer;
+   animation-name: squaresanimation;
+   animation-delay: 0;
+   animation-iteration-count: infinite;
+   animation-duration: 10s;
+   border-radius: 40px;
+}
+@keyframes squaresanimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg) scaleX(1.1);
+    }
+    
+}
+
+body{
+  background-image: url(https://img.freepik.com/free-photo/white-painted-wall-texture-background_53876-138197.jpg?w=996&t=st=1688126451~exp=1688127051~hmac=e77559d5c64648f3647cd94b35c5b2ad9760b12f5c94b0c75ac7b9a92c35d55c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow:hidden;
+  text-align: center;
+}
+
+button{
+  font-family:monospace;
+  background-color: greenyellow;
+  color:black;
+  border:solid 2px greenyellow;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  margin-top: 10px;
+  position:sticky;
+}
+button:hover {
+   background-color: black; 
+  color:greenyellow;
+  border:solid 2px black;
+  cursor:pointer;
+  border-radius: 40px;
+}
+
+.play{
+  margin-right: 5px;
+ animation: dropAndDance 4s ease ;
+}
+
+@keyframes dropAndDance {
+  0% {
+    transform: translateY(-200px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  70% {
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+ ul {
+  display:flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0 30px 0 30px;
+  margin: 10px 40px 0 30px;
+  font-size: 1.5rem;
+  height:fit-content;
+  width:80%;
+  background-color: transparent;
+  box-shadow: 0 0 15px black;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.link{
+  color:black;
+ 
+} 
+.link:hover{
+  color:greenyellow;
+}
