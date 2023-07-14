@@ -2,7 +2,7 @@ const router = require('express').Router();
 const Game = require('../models/game.model');
 
 router.post('/', async (req, res) => {
-  try {
+  try { 
     const newGame = new Game();
     await newGame.save();
     res.status(201).json(newGame);
