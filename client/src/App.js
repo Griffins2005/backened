@@ -103,11 +103,11 @@ export default function Board() {
       {isWinner && <Confetti />}
       {isWinner ? (
         <div>
-          <h1>🎉{isWinner} has won the game🎉</h1>
+          <h1>🎉Player {isWinner} has won the game🎉</h1>
           <h1>Player{loserPlayer} try next time</h1>
           <div>
             <button onClick={handleReset} className="play">
-              Reset Game
+             Play Again
             </button>
           </div>
         </div>
@@ -136,7 +136,7 @@ export default function Board() {
               <button onClick={handleReset} className="play">
                 Reset Game
               </button>
-            )}
+            )}  
           </div>
         </>
       )}
